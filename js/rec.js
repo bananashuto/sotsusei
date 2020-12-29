@@ -48,7 +48,7 @@ recognition.onresult = event => {
 
 
 //=====================================
-//以下、DOM系統
+//DOM系統
 //=====================================
 //cssの".active"を付与する場合
 const activeClass = "active";
@@ -64,7 +64,7 @@ recBt.addEventListener("click", function() {
 		//録音開始
 		recBt.classList.add(activeClass);
 		recognition.start();
-		recState.innerText = "会話中";
+		recState.innerText = "●会話中";
 		//開始時間の取得
 		startShowing();
 		// startTime();

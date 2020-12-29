@@ -1,0 +1,80 @@
+/* ーーーーーーーーー
+    結果(デフォルト)
+   ーーーーーーーーー*/
+ .result-container {
+    width: 92%;
+    height: 700px;
+    position: relative;
+    border-radius: 10px 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.06);
+     /* border: 1px dotted #989898; */
+
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result-container>p {
+    color: #AAA;
+    font-size: 14px;
+  }
+
+
+  /* ーーーーーーーーー
+    結果(コメント評価)
+   ーーーーーーーーー*/
+
+  .result-container>.result {
+    position: relative;
+    width: 92%;
+    height: 90%;
+  }
+  
+  /* .result-container>.result>img {
+    position: absolute;
+    transform: rotate(-29deg);
+  } */
+  
+
+  .comment-box {
+    display: flex;
+    width: 100%;
+    height: 130px;
+    /* padding: 20% 0; */
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    color: rgb(255, 255, 255);
+    border-radius: 10px 10px;
+    /* background-color: #f4f4f4; */
+    background: linear-gradient(120deg, #038cb6, #034BB6);
+    margin: 20px auto;
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.06);
+  }
+  
+  .comment-box>p {
+    display: block;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .comment-box>p.category {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .comment-box>p.point {
+    font-size: 16px;
+  }
+  
+  .comment-box>p.advise {
+    font-size: 16px;
+  }
+
+
+  .box{
+      /* background-color: rgb(255, 154, 154); */
+      color: #AAA;
+      font-size: 14px;
+  }

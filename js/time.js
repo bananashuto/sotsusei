@@ -23,7 +23,7 @@ function stopShowing() {
    var timeH = Math.floor(num % (24 * 60 * 60) / (60 * 60));
    var timeM = Math.floor(num % (24 * 60 * 60) % (60 * 60) / 60);
    var timeS = num % (24 * 60 * 60) % (60 * 60) % 60;
-   var timeDMS =  timeM + '分' ;
+   var timeDMS =  timeH + '時間'+ timeM + '分' ;
 
    console.log(timeDMS);
    $("#PassageArea").html(timeDMS);

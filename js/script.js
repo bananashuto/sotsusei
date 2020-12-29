@@ -46,26 +46,26 @@ function createDiagResult(category, point, phraseArray) {
 	}
 
 	// カテゴリー分けと点数から結果の画像と分類を決定
-	let imgNum = null;
+	// let imgNum = null;
 	let parseCategory = "";
 	switch (category) {
 		case "Positive":
 			parseCategory = "いい感じ！";
-			if (point >= 0.8) {
-				imgNum = 1;
-			} else if (point >= 0.6) {
-				imgNum = 2;
-			} else {
-				imgNum = 3;
-			}
+			// if (point >= 0.8) {
+			// 	imgNum = 1;
+			// } else if (point >= 0.6) {
+			// 	imgNum = 2;
+			// } else {
+			// 	imgNum = 3;
+			// }
 			break;
 		case "Neutral":
 			parseCategory = "微妙かな";
-			imgNum = 4;
+			// imgNum = 4;
 			break;
 		case "Negative":
 			parseCategory = "うーん...";
-			imgNum = 5;
+			// imgNum = 5;
 			break;
 	}
 
@@ -80,7 +80,7 @@ function createDiagResult(category, point, phraseArray) {
 
 	/*アドバイスをDOMに反映*/
 	//
-	document.getElementById("result_img").src = "img/grade/" + imgNum + ".png";
+	// document.getElementById("result_img").src = "img/grade/" + imgNum + ".png";
 	document.getElementById("result_category").innerText = parseCategory;
 	document.getElementById("result_point").innerText =
 		parseCategory + "度：" + Math.round(point * 100) + "点";
@@ -110,6 +110,7 @@ const diagAtention = document.getElementById("diag_caution");
 diagnoseBt.addEventListener("click", function() {
 	if (recText != "") {
 		requestAPIKey();
+		// document.location.assign('result.html');
 		diagAtention.classList.add("after-materialize");
 	} else {
 		diagAtention.classList.remove("after-materialize");

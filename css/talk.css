@@ -1,0 +1,49 @@
+/*＝＝＝＝＝＝＝＝＝＝ 
+    録音した会話
+＝＝＝＝＝＝＝＝＝＝＝ */
+
+.rec-text-container {
+    width: 92%;
+    height: 555px;
+    margin: 0 auto;
+  }
+  
+  .rec-text-container>.title {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(120deg, #036DB6, #034BB6);
+    color: #FFF;
+  }
+  
+  .rec-text-container>.content {
+    height: 555px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    overflow: auto;
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.06);
+    
+  }
+  
+  .talk-section {
+    position: relative;
+    /* width: fit-content; */
+    max-width: 200px;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    text-align: left;
+    border-radius: 15px;
+    background-color: #F1F2F6;
+    color: #5A5A5A;
+  }
+  
+  .talk-section.right {
+    clear: both;
+    float: right;
+  }
+  
+  .talk-section.left {
+    clear: both;
+    float: left;
+  }

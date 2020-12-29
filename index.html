@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/btn.css">
+    <link rel="stylesheet" type="text/css" href="css/talk.css">
+    <link rel="stylesheet" type="text/css" href="css/result.css">
     <title>familytalk</title>
   </head>
 
@@ -34,81 +37,90 @@
       </section>
 
 <!-------------------
-  録音ボタン
+  録音 & 測定ボタン
   ------------------->
+      
       <section class="btn"> 
-      <div class="rec-bt-container ">
-        <p id="rec_state_text">default</p>
-        <button id="rec_bt" class="rec-bt"><span>●</span><span></span>REC</span></button>
-      </div>
-    </section>
-
-<!-------------------
-  診断ボタン
-  ------------------->
-      <section>
+        <!-- 録音 -->
+        <div class="rec-bt-container ">
+          <button id="rec_bt" class="rec-bt">
+            <span><p id="rec_state_text">default</p></span>
+          </button>
+        </div>
+        <!-- 測定 -->
         <div class="step-inner">
             <button id="diagnose_bt" class="strong-bt">測定する</button>
-            <p id="diag_caution" class="after-materialize caution">
-              「会話が存在しない・ClientID・ClientSecret」のいずれかの条件を満たしていないため診断を行えません。</p>
-          </div>
         </div>
       </section>
+        <!-- ※注意 -->
+      <p id="diag_caution" class="after-materialize caution">
+        ※会話が存在しないため診断を行えません。</p>
 
 
-
-
-
-
-
-
-
+<!-------------------
+        結果
+  ------------------->
       <section>
         <h2>
-          STEP3　結果を見る
+          結果
         </h2>
-        <div class="step-inner">
-          <div class="p-group">
-            <p>結果が以下に表示されます！</p>
-            <p>気になるあの子との距離がいかほどのものなのか見てみてください！</p>
-          </div>
-        </div>
+
         <div class="result-container">
-          <p id="result_default">診断後、ここに結果が表示されます</p>
+          <!-- デフォルト -->
+          <div class="box">
+            <p id="result_default">診断後、ここに結果が表示されます</p>
+          </div>
+
+          <!-- フィードバック -->
           <div id="result_response" class="result exit-erase">
-            <img id="result_img" src="#">
+            <!-- 画像 -->
+            <!-- <img id="result_img" src="#"> -->
+
+            <!-- コメント -->
             <div class="comment-box">
               <p id="result_category" class="category">category:default</p>
-              <p id="result_point" class="point">point:0.0点</p>
               <p id="result_advice" class="advise">advise:default</p>
+            </div>
+            <div class="comment-box">
+              会話時間==><p id="PassageArea"></p>
+            </div>
+            <div class="comment-box">
               <p id="result_phrase" class="phrase">phrase:default</p>
             </div>
+            <div class="comment-box">
+              <p id="result_point" class="point">point:0.0点</p>
+            </div>
+
           </div>
         </div>
+
+        <div class="again-btn">
+          <button id="one_more_game_bt" class="strong-bt">もう一度遊ぶ</button>
         </div>
-        <div class="step-inner">
-          <div class="p-group">
-            <p>結果はいかがでしたでしょうか？</p>
-            <p>どうであれ、気になるあの子との距離が縮まることを心よりお祈りしております。</p>
-          </div>
-        </div>
-        <button id="one_more_game_bt" class="strong-bt">もう一度遊ぶ</button>
       </section>
 
 
 
-
-      会話時間==>
-      <h2 id="PassageArea"></h2>
     </main>
 
+
+
+
+<!-------------------
+   フッター
+  ------------------->
     <footer>
 
       <div class="p-group">
-        <p>© 2020 Sora Yamaguchi All Rights Reserved</p>
+        <p>© 2020  All Rights Reserved</p>
       </div>
     </footer>
     </div>
+
+<!-------------------
+   JavaScript
+  ------------------->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/rec.js"></script>

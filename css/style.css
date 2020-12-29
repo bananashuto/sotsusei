@@ -9,6 +9,7 @@ body {
 main {
   margin: 0 auto;
   background-color: #F1F2F6;
+  padding-bottom: 20px;
 }
 
  h1{
@@ -17,202 +18,46 @@ main {
   justify-content: center;
   align-items: center;
   flex-flow: wrap;
-  background-color: #035EB6;
+  background: linear-gradient(120deg, #036DB6, #034BB6);
   color: #FFF;
   width: 414px;
   height: 60px;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
 }
+
 
 section {
   margin-top: 30px;
 }
 
 
-/*＝＝＝＝＝＝＝＝＝＝ 
-    録音した会話
-＝＝＝＝＝＝＝＝＝＝＝ */
-
- .rec-text-container {
-  width: 92%;
-  height: 500px;
-  margin: 0 auto;
-}
-
-.rec-text-container>.title {
-  width: 100%;
+.top-title{
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
   text-align: center;
-  border-radius: 10px 10px 0 0;
-  background-color: #035EB6;
-  color: #FFF;
+  margin-bottom: 300px;
 }
-
-.rec-text-container>.content {
-  height: 555px;
-  border-radius: 10px 10px;
-  padding: 10px;
-  background-color: #ffffff;
-  overflow: auto;
-}
-
-.talk-section {
-  position: relative;
-  /* width: fit-content; */
-  max-width: 200px;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  text-align: left;
-  border-radius: 15px;
-  background-color: #F1F2F6;
-  color: #5A5A5A;
-}
-
-.talk-section.right {
-  clear: both;
-  float: right;
-}
-
-.talk-section.left {
-  clear: both;
-  float: left;
-}
-
-
-
-
-/*＝＝＝＝＝＝＝＝＝＝ 
-    録音ボタン
-＝＝＝＝＝＝＝＝＝＝＝ */
-
-
-button{
-  background-color: #035EB6;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  appearance: none;
-}
-
-.rec-bt-container {
-  margin-top: 100px;
+.top-subtitle{
+  color: rgb(255, 255, 255);
   text-align: center;
-}
-
-button.rec-bt {
-  width: 150px;
-  height: 50px;
-  color: #2E2E2E;
-  /* border: 1px solid #2E2E2E; */
-  border-radius: 20px;
-  /* box-shadow: 0 4px 0px 0px #BBB; */
-  transition-duration: 0.1s;
-}
-
-button.rec-bt:active {
-  transform: translateY(4px);
-  box-shadow: none;
-  
-}
-
-button.rec-bt.active {
-  color: #ff2222;
-}
-
-button.rec-bt span {
-  display: block;
-}
-
-button.rec-bt span:nth-child(1) {
-  font-size: 30px;
-}
-
-button.rec-bt.active span:nth-child(1) {
-  animation: rec-anim 1s ease 0s infinite normal;
-}
-
-button.rec-bt span:nth-child(2) {
-  font-size: 12px
-}
-
-@keyframes rec-anim {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
-
-
-
-/*＝＝＝＝＝＝＝＝＝＝ 
-    診断ボタン
-＝＝＝＝＝＝＝＝＝＝＝ */
-
-.strong-bt {
-  margin: 0 auto;
   font-size: 14px;
-  display: block;
-  padding: 10px 40px;
-  color: white;
-  background-color: #F84545;
-  border: none;
-  border-radius: 30px;
-  transition-duration: .3s;
 }
 
-.strong-bt:hover {
-  color: #F84545;
-  background-color: #FFF;
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 414px;
+  height: 896px;
+  background: linear-gradient(120deg, #036DB6, #034BB6);
+
 }
 
-.after-materialize {
-  opacity: 0;
+.top-contents{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-
-.exit-erase {
-  display: none;
-}
-
-p.caution {
-  color: #F84545
-}
-
-
-
-
-
-
-
-
-
-
-/* .top-space {
-  margin-top: 20px;
-}
-
-.p-group {
-  padding-top: 1.2em;
-}
-
-.p-group>p.strong {
-  font-weight: bolder;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ======
@@ -229,17 +74,46 @@ p.caution {
  * 各ステップセクションごとの共通UI
  */
 
-.step-inner {
+/* .step-inner {
   width: 80%;
   margin: 0 auto;
-}
+} */
 
 section>h2 {
   width: fit-content;
   margin: 0 auto;
+  font-size: 20px;
   border-bottom: 1px solid #2E2E2E;
 }
 
+
+
+/* ======
+ * フッター
+ */
+
+footer {
+  padding: 30px;
+  background-color: #dfdfdf
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+/* .top-space {
+  margin-top: 20px;
+}
+.p-group {
+  padding-top: 1.2em;
+}
+.p-group>p.strong {
+  font-weight: bolder;
+} */
 
 
 
@@ -248,7 +122,7 @@ section>h2 {
  * TOKEN入力テキストとボタン
  */
 
-.diagnose-container {
+ /* .diagnose-container {
   width: 100%;
   margin: 25px auto 0 auto;
   justify-content: space-around;
@@ -268,94 +142,5 @@ section>h2 {
   border-radius: 12px;
   font-size: 1.2em;
   text-align: center;
-}
+} */
 
-/* =======
- * 結果表示
- */
-
-.result-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 62vh;
-  margin: 20px auto 0 auto;
-  background-color: #EEE;
-  border: 2px dotted #2E2E2E;
-  justify-content: center;
-  align-items: center;
-}
-
-.result-container>p {
-  color: #AAA;
-  font-size: 18px;
-}
-
-.result-container>.result {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.result-container>.result>img {
-  position: absolute;
-  transform: rotate(-29deg);
-}
-
-.comment-box {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 23% 0;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  background-color: #FFF2CC;
-}
-
-.comment-box>p {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.comment-box>p.category {
-  font-size: 36px;
-}
-
-.comment-box>p.point {
-  font-size: 24px;
-}
-
-.comment-box>p.advise {
-  font-size: 14px;
-}
-
-/* ======
- * フッター
- */
-
-footer {
-  margin-top: 80px;
-  padding: 10px;
-  background-color: #FFE6CC
-}
-
-footer p {
-  text-align: center;
-}
-
-@media screen and (max-width:640px) {
-  main {
-    width: 94%;
-  }
-  .input-group {
-    flex-wrap: wrap;
-  }
-  .diagnose-container>.input-group>input {
-    width: 100%;
-  }
-  .result-container>.result>img {
-    width: 30%;
-  }
-}
